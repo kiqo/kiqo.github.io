@@ -1,0 +1,4 @@
+Sitemap: https://kiqo.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: kiqo.github.io
