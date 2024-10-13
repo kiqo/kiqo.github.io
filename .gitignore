@@ -1,5 +1,5 @@
-__pycache__
-cache
+**/__pycache__
+**/cache
 .doit.db.db
 .doit.db
 output
