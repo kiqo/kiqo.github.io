@@ -28,7 +28,6 @@ Your site has now been generated inside the `output/` directory.
 
 ### Create New Post
 ```
-git checkout dev
 nikola new_post -e -f markdown
 ```
 
@@ -41,4 +40,9 @@ You can also use a server with automatic rebuilds by running `nikola auto --brow
 ## Iterate & Deploy
 
 Nikola is configured to [deploy to Github Pages](https://getnikola.com/handbook.html#deploying-to-github). 
-Run `nikola github_deploy` for deployment. This will build the site, commit the output folder to the `dev` branch, and push to GitHub. Your website should be up and running within a few minutes.
+Run `nikola github_deploy` for deployment. This will build the site, commit the output folder to the `deploy` branch, and push to GitHub. 
+The `deploy` branch is configured to be deployed to [kiqo.github.io](https://kiqo.github.io).
+The website should be up and running within a few minutes.
+
+For iteration, commit and push to the `dev` branch (and optionally do deployments), and create PRs targeting the `main` branch.
+
