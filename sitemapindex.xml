@@ -6,71 +6,103 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://kiqo.github.io/authors/kiqo.xml</loc>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://kiqo.github.io/authors/roberto-alsina.xml</loc>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://kiqo.github.io/categories/blog.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://kiqo.github.io/categories/cat_engineering.xml</loc>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/categories/cat_nikola.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/categories/demo.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/categories/nikola.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://kiqo.github.io/categories/python-web-github.xml</loc>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/categories/python.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://kiqo.github.io/de/authors/kiqo.xml</loc>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://kiqo.github.io/de/authors/roberto-alsina.xml</loc>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/de/categories/blog.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://kiqo.github.io/de/categories/cat_engineering.xml</loc>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/de/categories/cat_nikola.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/de/categories/demo.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/de/categories/nikola.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://kiqo.github.io/de/categories/python-web-github.xml</loc>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/de/categories/python.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/de/galleries/demo/rss.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/de/galleries/rss.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/de/rss.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/galleries/demo/rss.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/galleries/rss.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/rss.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://kiqo.github.io/sitemap.xml</loc>
-  <lastmod>2024-10-13T10:36:00Z</lastmod>
+  <lastmod>2024-10-13T11:31:00Z</lastmod>
  </sitemap>
 </sitemapindex>
