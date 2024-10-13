@@ -45,4 +45,3 @@ The `deploy` branch is configured to be deployed to [kiqo.github.io](https://kiq
 The website should be up and running within a few minutes.
 
 For iteration, commit and push to the `dev` branch (and optionally do deployments), and create PRs targeting the `main` branch.
-
