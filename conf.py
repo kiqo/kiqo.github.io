@@ -686,7 +686,7 @@ REDIRECTIONS = []
 # https://getnikola.com/handbook.html#deploying-to-github
 # You will need to configure the deployment branch on GitHub.
 GITHUB_SOURCE_BRANCH = 'dev'   # Any change pushed here is not deployed
-GITHUB_DEPLOY_BRANCH = 'main'  # Any change pushed here is directly deployed to Github Pages
+GITHUB_DEPLOY_BRANCH = 'deploy'  # Any change pushed here is directly deployed to Github Pages
 
 # The name of the remote where you wish to push to, using github_deploy.
 GITHUB_REMOTE_NAME = 'origin'
