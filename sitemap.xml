@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://kiqo.github.io/archive.html</loc>
-  <lastmod>2024-10-13T11:49:00Z</lastmod>
+  <lastmod>2024-10-14T01:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://kiqo.github.io/authors/</loc>
@@ -35,7 +35,7 @@
  </url>
  <url>
   <loc>https://kiqo.github.io/categories/</loc>
-  <lastmod>2024-10-13T11:31:00Z</lastmod>
+  <lastmod>2024-10-14T01:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://kiqo.github.io/categories/blog/</loc>
@@ -54,6 +54,10 @@
   <lastmod>2024-10-13T11:31:00Z</lastmod>
  </url>
  <url>
+  <loc>https://kiqo.github.io/categories/github/</loc>
+  <lastmod>2024-10-14T01:19:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://kiqo.github.io/categories/nikola/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
  </url>
@@ -64,6 +68,10 @@
  <url>
   <loc>https://kiqo.github.io/categories/python/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://kiqo.github.io/categories/web/</loc>
+  <lastmod>2024-10-14T01:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://kiqo.github.io/de/</loc>
@@ -79,23 +87,19 @@
  </url>
  <url>
   <loc>https://kiqo.github.io/de/archive.html</loc>
-  <lastmod>2024-10-13T11:49:00Z</lastmod>
+  <lastmod>2024-10-14T01:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://kiqo.github.io/de/authors/</loc>
-  <lastmod>2024-10-13T11:31:00Z</lastmod>
+  <lastmod>2024-10-14T01:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://kiqo.github.io/de/authors/kiqo/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
  </url>
  <url>
-  <loc>https://kiqo.github.io/de/authors/roberto-alsina/</loc>
-  <lastmod>2024-10-13T11:31:00Z</lastmod>
- </url>
- <url>
   <loc>https://kiqo.github.io/de/categories/</loc>
-  <lastmod>2024-10-13T11:31:00Z</lastmod>
+  <lastmod>2024-10-14T01:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://kiqo.github.io/de/categories/blog/</loc>
@@ -114,6 +118,10 @@
   <lastmod>2024-10-13T11:31:00Z</lastmod>
  </url>
  <url>
+  <loc>https://kiqo.github.io/de/categories/github/</loc>
+  <lastmod>2024-10-14T01:19:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://kiqo.github.io/de/categories/nikola/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
  </url>
@@ -126,6 +134,10 @@
   <lastmod>2024-10-13T11:31:00Z</lastmod>
  </url>
  <url>
+  <loc>https://kiqo.github.io/de/categories/web/</loc>
+  <lastmod>2024-10-14T01:19:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://kiqo.github.io/de/galleries/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
  </url>
@@ -136,82 +148,66 @@
  <url>
   <loc>https://kiqo.github.io/de/pages/about-nikola/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/about-nikola/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/bootstrap-demo/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/bootstrap-demo/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/charts/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/charts/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/creating-a-theme/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/creating-a-theme/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/dr-nikolas-vendetta/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/dr-nikolas-vendetta/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/extending/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/extending/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/handbook/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/handbook/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/internals/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/internals/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/listings-demo/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/listings-demo/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/path-handlers/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/path-handlers/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/quickref/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/quickref/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/quickstart/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/quickstart/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/social_buttons/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/social_buttons/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/pages/theming/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/pages/theming/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/posts/python-static-web-site-generators-for-blogs/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/posts/python-static-web-site-generators-for-blogs/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/de/posts/welcome-to-nikola/</loc>
   <lastmod>2024-10-13T11:31:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://kiqo.github.io/posts/welcome-to-nikola/" />
  </url>
  <url>
   <loc>https://kiqo.github.io/galleries/</loc>
@@ -227,7 +223,7 @@
  </url>
  <url>
   <loc>https://kiqo.github.io/listings/hello.py.html</loc>
-  <lastmod>2024-10-13T11:49:00Z</lastmod>
+  <lastmod>2024-10-14T01:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://kiqo.github.io/pages/about-nikola/</loc>

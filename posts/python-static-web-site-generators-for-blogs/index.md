@@ -2,7 +2,7 @@
 .. title: Python static web site generators for blogs
 .. slug: python-static-web-site-generators-for-blogs
 .. date: 2024-10-13 12:52:28 UTC+02:00
-.. tags: python web github
+.. tags: python, web, github
 .. category: engineering
 .. link: 
 .. description: Learnings when setting up this Blog web site with Python 
@@ -23,13 +23,12 @@ Not only does it list what type of web site the library/tool is aiming for, but 
 
 When looking at "Blog" section and the ones for Python, that still seem to be maintained (with >50 Github Stars and recent commits):   
 
-* [Blag](https://github.com/venthur/blag) ([docs](https://blag.readthedocs.io/en/latest/))
+* [Blag](https://github.com/venthur/blag) ([docs](https://blag.readthedocs.io/en/latest/), [demo](https://venthur.de/))
     * Design: Nice look and simple
     * Featuers: Jinja2, live reload
-* [Hyde](https://github.com/hyde/hyde) ([demos](https://github.com/hyde/hyde/wiki/Hyde-Powered))
-    * Design: Very customisable, some very nice and some very ugly
-* [Pelican](https://github.com/getpelican/pelican) ([docs](https://docs.getpelican.com/en/latest/quickstart.html))
-    * Featuers: Jinja2, live reload, Code Syntax Highlighting, Linking to internal content, Importing Tool, Chronological content as well as static pages
+* [Pelican](https://github.com/getpelican/pelican) ([docs](https://docs.getpelican.com/en/latest/quickstart.html), [demos](https://pelicanthemes.com/))
+    * Design: Many not so-nice looking themes, themes as plugins
+    * Featuers: Jinja2, live reload, Code Syntax Highlighting, Linking to internal content, Importing Tool, Chronological content as well as static pages, multilingual support
 * [Nikola](https://github.com/getnikola/nikola) ([docs](https://getnikola.com/handbook.html#why-static), [demos](https://themes.getnikola.com/))
     * Design: Ugly by default, several themes as plugins, with some of themes (e.g. [hack](https://themes.getnikola.com/v8/hack/demo/)) looking nice
     * Featuers: Mako or Jinja2, many input formats incl. rst, Markdown, IPython Notebooks and HTML, live reload, multilingual support, Deployment support
@@ -38,6 +37,7 @@ When looking at "Blog" section and the ones for Python, that still seem to be ma
 The following libraries are left out in this comparison: 
 
 * [aurora](https://github.com/capjamesg/aurora) - not having a nice-looking demo
+* [Hyde](https://github.com/hyde/hyde) - not maintained anymore and no Python 3 support
 * [makesite](https://github.com/sunainapai/makesite) - not maintained anymore
 
 ## Decision 
