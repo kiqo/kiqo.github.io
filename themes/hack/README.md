@@ -8,4 +8,4 @@ setting the `HACK_VARIANT` variable in `GLOBAL_CONTEXT` to one of
 * solarized-dark
 * standard
 
-©2024 Kiqo
+©2024 Roberto Alsina
