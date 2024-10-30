@@ -43,7 +43,7 @@ An incomplete list (write me if any resource is missing):
 * (inofficial?) https://github.com/spacekookie/learning-nix
 
 One small piece to be aware of: 
-In the official documentation, a Tutorial contains learning resources whereas a Guide contains only steps to follow [3].
+In the official documentation, a *Tutorial* contains learning resources whereas a *Guide* contains only steps to follow [3].
 
 ## Sources
 
