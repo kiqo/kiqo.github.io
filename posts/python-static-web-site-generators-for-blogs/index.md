@@ -42,4 +42,4 @@ The following libraries are left out in this comparison:
 
 ## Decision 
 
-In the end, the winner for me was Nikola due to its many out-of-the box features, including the IPython Support available by default.  
+In the end, the winner for me was Nikola due to its many out-of-the box features, including the IPython Support available by default.

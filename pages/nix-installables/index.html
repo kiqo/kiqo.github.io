@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html prefix="        og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Introduction of Nix Installables">
+<meta name="viewport" content="width=device-width">
+<title>Tutorial: Nix Installables | Kiqo's ML and Engineering Musings</title>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="https://kiqo.github.io/pages/nix-installables/">
+<!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Kiqo">
+<meta property="og:site_name" content="Kiqo's ML and Engineering Musings">
+<meta property="og:title" content="Tutorial: Nix Installables">
+<meta property="og:url" content="https://kiqo.github.io/pages/nix-installables/">
+<meta property="og:description" content="Introduction of Nix Installables">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2024-10-20T03:46:28+02:00">
+<meta property="article:tag" content="engineering">
+<meta property="article:tag" content="nix">
+<meta property="article:tag" content="os">
+</head>
+<body>
+    <a href="#page-content" class="sr-only sr-only-focusable">Skip to main content</a>
+    
+    <section class="social"><ul>
+<li><a href="../../index.html" title="Home"><i class="fa fa-home"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="fa fa-tags"></i></a></li>
+            <li><a href="https://github.com/kiqo" title="My Github"><i class="fab fa-github"></i></a></li>
+    
+    
+
+        </ul></section><section class="page-content"><div class="content" rel="main">
+            
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Tutorial: Nix Installables</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>In short, Nix Installables are on what most <code>nix</code> cli commands operate on and represent something that can be stored in the Nix store [1]. </p>
+<h4>Installables</h4>
+<p>The following types of <strong>installables</strong> are supported by most commands:
+* Flake output attribute (experimental) (default)
+* Store path
+   * This is assumed if the argument is a Nix store path or a symlink to a Nix store path
+* Nix file, optionally qualified by an attribute path
+   * Specified with <code>--file/-f</code>
+* Nix expression, optionally qualified by an attribute path
+   * Specified with <code>--expr/-E</code></p>
+<p>For most commands, if no installable is specified, <code>.</code> is assumed. That is, Nix will operate on the default flake output attribute of the flake in the current directory.</p>
+<h5>Flake Output Attribute</h5>
+<p>Note: TODO - unclear: why is it here with #? 
+<strong>Flake references</strong> when used via the <code>nix</code>-cli are of the form <code>flakeref[#attrpath]</code> where <code>flakeref</code> is one of the above flake references and <code>attrpath</code> is an optional attribute path.</p>
+<p>For example, the following would select the <code>nixpkgs</code> flake, and print the output path. </p>
+<div class="code"><table class="codetable">
+<tr>
+<td class="linenos linenodiv"><a href="#-42"><code data-line-number="42"></code></a></td>
+<td class="code"><code>nix build --print-out-paths 'nixpkgs#hello'
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-43"><code data-line-number="43"></code></a></td>
+<td class="code"><code># /nix/store/8fpvkfwr8fm91xlzznsgh3g1fcw0hfnh-hello-2.12.1
+</code></td>
+</tr>
+</table></div>
+<h5>Store path</h5>
+<p>These are paths inside the Nix store, or symlinks that resolve to a path in the Nix store.
+Examples:</p>
+<div class="code"><pre class="code literal-block">/nix/store/v5sv61sszx301i0x6xysaqzla09nksnd-hello-2.10
+/nix/store/p7gp6lxdg32h4ka1q398wd9r2zkbbz2v-hello-2.10.drv<span class="w">  </span><span class="c1"># store derivation</span>
+/nix/store/p7gp6lxdg32h4ka1q398wd9r2zkbbz2v-hello-2.10.drv^out<span class="w"> </span><span class="c1"># refer to the `out` output path of the derivation</span>
+/nix/store/p7gp6lxdg32h4ka1q398wd9r2zkbbz2v-hello-2.10.drv^*<span class="w"> </span><span class="c1"># all outputs can be referred to at once with the special syntax ^*.</span>
+</pre></div>
+
+<p>Example:</p>
+<div class="code"><pre class="code literal-block">ls<span class="w"> </span>/nix/store/*hello*.drv<span class="w"> </span><span class="c1"># find a path to a derivation</span>
+nix<span class="w"> </span>derivation<span class="w"> </span>show<span class="w"> </span><span class="s1">'/nix/store/161hd6k485dvr9cx02ccnc1x4n9fzix6-hello-2.12.1.drv^*'</span>
+</pre></div>
+
+<h5>Nix file</h5>
+<p>With the option: <code>-f / --file path [attrpath...]</code>, installables are interpreted as the value of the expression in the Nix file at <code>path</code>.
+If attribute paths are provided, commands will operate on the corresponding values accessible at these paths. </p>
+<p>The Nix expression in that file, or any selected attribute, must evaluate to a <strong>derivatio</strong> (in the next guide, we will learn what derivations are in more details).</p>
+<p>Example: TODO: <code>--file /path/to/nixpkgs hello</code>
+TODO: test if this works</p>
+<div class="code"><pre class="code literal-block">nix<span class="w"> </span>build<span class="w"> </span>--file<span class="w"> </span>./flake.nix
+</pre></div>
+
+<h5>Nix expression</h5>
+<p>With the option: <code>--expr expression [attrpath...]</code>, installables are interpreted as the value of the of the Nix expression. 
+Same as for Nix files: If attribute paths are provided, commands will operate on the corresponding attribute paths and the Nix expression, or any selected attribute, must evaluate to a derivation.</p>
+<p>Example: </p>
+<div class="code"><pre class="code literal-block">nix<span class="w"> </span>build<span class="w"> </span>--print-out-paths<span class="w"> </span>--impure<span class="w"> </span>--expr<span class="w"> </span><span class="s1">'import &lt;nixpkgs&gt; {}'</span><span class="w"> </span>hello<span class="w"> </span><span class="c1"># or</span>
+nix<span class="w"> </span>run<span class="w"> </span>--impure<span class="w"> </span>--expr<span class="w"> </span><span class="s1">'import &lt;nixpkgs&gt; {}'</span><span class="w"> </span>hello
+</pre></div>
+
+<p>You may need to specify <code>--impure</code> if the expression references impure inputs (such as <nixpkgs>) - see more about impurity here (TODO).</nixpkgs></p>
+<h5>Extra: Default outputs</h5>
+<p>If no desired output are specified, but the derivation has an attribute <code>meta.outputsToInstall</code>, Nix will use those outputs. </p>
+<p>For example, since the package <code>nixpkgs#libxml2</code> has this attribute:</p>
+<div class="code"><pre class="code literal-block">nix<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="s1">'nixpkgs#libxml2.meta.outputsToInstall'</span>
+<span class="c1"># [ "bin" "man" ]</span>
+</pre></div>
+
+<p>a command like <code>nix shell nixpkgs#libxml2</code> will provide only those two outputs by default.</p>
+<p>Otherwise, Nix will use all outputs of the derivation.</p>
+<h3>Sources</h3>
+<ul>
+<li>[<a href="https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix">1</a>] Nix experimental high-level documentation</li>
+</ul>
+</div>
+    
+
+</article><footer id="footer"><p>Contents © 2024         <a href="mailto:kiqo@github.com">Kiqo</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+</p>
+<p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
+
+            
+        </footer>
+</div>
+    </section><script src="../../assets/js/all-nocdn.js"></script><script src="https://polyfill.io/v3/polyfill.js?features=Intl.RelativeTimeFormat.%7Elocale.en"></script><script src="../../assets/js/luxon.min.js"></script><!-- fancy dates --><script>
+    luxon.Settings.defaultLocale = "en";
+    fancydates(2, {"preset": false, "format": "yyyy-MM-dd HH:mm"});
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

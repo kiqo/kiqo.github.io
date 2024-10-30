@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html prefix="" lang="en">
+<html prefix="        og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="description" content="Learnings when setting up this Blog web site with Python ">
 <meta name="viewport" content="width=device-width">
 <title>Python static web site generators for blogs | Kiqo's ML and Engineering Musings</title>
-<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/dark.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://kiqo.github.io/posts/python-static-web-site-generators-for-blogs/">
-<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Kiqo">
+<!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Kiqo">
+<link rel="prev" href="../post-how-to-learn-nix/" title="How to learn Nix" type="text/html">
 <meta property="og:site_name" content="Kiqo's ML and Engineering Musings">
 <meta property="og:title" content="Python static web site generators for blogs">
 <meta property="og:url" content="https://kiqo.github.io/posts/python-static-web-site-generators-for-blogs/">
@@ -25,50 +24,48 @@
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="web">
 </head>
-<body class="hack dark">
-
-<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
-    <div id="container">
-         
-    <header id="header"><h1 id="brand"><a href="../../" title="Kiqo's ML and Engineering Musings" rel="home">
-
-        <span id="blog-title">Kiqo's ML and Engineering Musings</span>
-    </a></h1>
-
-        
-
-        
-    <nav id="menu"><ul>
-<li><a href="../../archive.html">Archive</a></li>
-                <li><a href="../../categories/">Tags</a></li>
-                <li><a href="../../rss.xml">RSS feed</a></li>
-
+<body>
+    <a href="#page-content" class="sr-only sr-only-focusable">Skip to main content</a>
     
-
+    <section class="social"><ul>
+<li><a href="../../index.html" title="Home"><i class="fa fa-home"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="fa fa-tags"></i></a></li>
+            <li><a href="https://github.com/kiqo" title="My Github"><i class="fab fa-github"></i></a></li>
     
     
-    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Python static web site generators for blogs</a></h1>
+
+        </ul></section><section class="page-content"><div class="content" rel="main">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Python static web site generators for blogs</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+            <p class="dateline"><a href="." rel="bookmark"><i class="fa fa-clock"></i> <time class="published dt-published" datetime="2024-10-13T12:52:28+02:00" itemprop="datePublished" title="2024-10-13 12:52">2024-10-13 12:52</time></a></p>
+            <p class="byline author vcard"> <i class="fa fa-user"></i> <span class="byline-name fn" itemprop="author">
                     Kiqo
             </span></p>
-            <p class="dateline">
-            <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2024-10-13T12:52:28+02:00" itemprop="datePublished" title="2024-10-13 12:52">2024-10-13 12:52</time></a>
-            </p>
-                <p class="commentline">
+                <p class="commentline"><i class="far fa-comment"></i>
     
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/python-static-web-site-generators-for-blogs.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/00-python-static-web-site-generators-for-blogs.html">Comments</a>
 
 
             
         </p>
-<p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
+<p class="sourceline"><a href="index.md" class="sourcelink"><i class="fa fa-file-code"></i> Source</a></p>
+
+            
+
+            
+    <div class="tags">
+<h3 class="metadata-title">
+<i class="fa fa-tags"></i> Tags:</h3>
+        <ul itemprop="keywords" class="tags-ul">
+<li><a class="tag p-category" href="../../categories/github/" rel="tag">github</a></li>
+            <li><a class="tag p-category" href="../../categories/python/" rel="tag">python</a></li>
+            <li><a class="tag p-category" href="../../categories/web/" rel="tag">web</a></li>
+        </ul>
+</div>
 
         </div>
-        
-
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p>There is a really awesome comparison over <strong>all</strong> static web site generators <a href="https://github.com/myles/awesome-static-generators">here</a>.
 Not only does it list what type of web site the library/tool is aiming for, but it also lists the supported languages.</p>
@@ -111,12 +108,12 @@ Not only does it list what type of web site the library/tool is aiming for, but 
 <a href="https://github.com/sunainapai/makesite">makesite</a> - not maintained anymore</li>
 </ul>
 <h3>Decision</h3>
-<p>In the end, the winner for me was Nikola due to its many out-of-the box features, including the IPython Support available by default.  </p>
+<p>In the end, the winner for me was Nikola due to its many out-of-the box features, including the IPython Support available by default.</p>
     </div>
-    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/github/" rel="tag">github</a></li>
-            <li><a class="tag p-category" href="../../categories/python/" rel="tag">python</a></li>
-            <li><a class="tag p-category" href="../../categories/web/" rel="tag">web</a></li>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../post-how-to-learn-nix/" rel="prev" title="How to learn Nix">Previous post</a>
+            </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
     
@@ -125,7 +122,7 @@ Not only does it list what type of web site the library/tool is aiming for, but 
         var disqus_shortname ="kiqo",
             disqus_url="https://kiqo.github.io/posts/python-static-web-site-generators-for-blogs/",
         disqus_title="Python static web site generators for blogs",
-        disqus_identifier="cache/posts/python-static-web-site-generators-for-blogs.html",
+        disqus_identifier="cache/posts/00-python-static-web-site-generators-for-blogs.html",
         disqus_config = function () {
             this.language = "en";
         };
@@ -139,18 +136,22 @@ Not only does it list what type of web site the library/tool is aiming for, but 
     <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-        </section></article><script>var disqus_shortname="kiqo";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></main><footer id="footer"><p>Contents © 2024         <a href="mailto:kiqo@github.com">Kiqo</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+        </section></article><script>var disqus_shortname="kiqo";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2024         <a href="mailto:kiqo@github.com">Kiqo</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
 </p>
 <p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
 
             
         </footer>
 </div>
-    
-    
-
-    
-    
-    
+    </section><script src="../../assets/js/all-nocdn.js"></script><script src="https://polyfill.io/v3/polyfill.js?features=Intl.RelativeTimeFormat.%7Elocale.en"></script><script src="../../assets/js/luxon.min.js"></script><!-- fancy dates --><script>
+    luxon.Settings.defaultLocale = "en";
+    fancydates(2, {"preset": false, "format": "yyyy-MM-dd HH:mm"});
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
 </body>
 </html>

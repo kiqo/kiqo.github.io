@@ -3,7 +3,7 @@
 import sys
 
 
-def hello(name='world'):
+def hello(name="world"):
     greeting = "hello " + name
     print(greeting)
 

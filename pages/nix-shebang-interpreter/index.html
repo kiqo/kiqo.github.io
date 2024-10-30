@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html prefix="        og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="The Nix Shebang Interpreter">
+<meta name="viewport" content="width=device-width">
+<title>Tutorial: Nix Shebang Interpreter | Kiqo's ML and Engineering Musings</title>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="https://kiqo.github.io/pages/nix-shebang-interpreter/">
+<!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Kiqo">
+<meta property="og:site_name" content="Kiqo's ML and Engineering Musings">
+<meta property="og:title" content="Tutorial: Nix Shebang Interpreter">
+<meta property="og:url" content="https://kiqo.github.io/pages/nix-shebang-interpreter/">
+<meta property="og:description" content="The Nix Shebang Interpreter">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2024-10-23T03:46:28+02:00">
+<meta property="article:tag" content="engineering">
+<meta property="article:tag" content="nix">
+<meta property="article:tag" content="os">
+</head>
+<body>
+    <a href="#page-content" class="sr-only sr-only-focusable">Skip to main content</a>
+    
+    <section class="social"><ul>
+<li><a href="../../index.html" title="Home"><i class="fa fa-home"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="fa fa-tags"></i></a></li>
+            <li><a href="https://github.com/kiqo" title="My Github"><i class="fab fa-github"></i></a></li>
+    
+    
+
+        </ul></section><section class="page-content"><div class="content" rel="main">
+            
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Tutorial: Nix Shebang Interpreter</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>In short, the Nix Shebang Interpreter can be used to run multiple Nix commands, interleaved with short program code (TODO???)</p>
+<h3>Example with Flake</h3>
+<p>We want to run our <code>hello</code> program and provide it as an executable. </p>
+<p>Create a file <code>./myhello</code> with the following content: </p>
+<div class="code"><pre class="code literal-block">#!/usr/bin/env nix
+#! nix shell --file ``&lt;nixpkgs&gt;`` hello --command bash
+hello
+</pre></div>
+
+<p>Then run:</p>
+<div class="code"><pre class="code literal-block">chmod<span class="w"> </span>a+x<span class="w"> </span>./myhello
+./myhello
+<span class="c1"># Hello, world!</span>
+</pre></div>
+
+<p>This creates a bash shell which has the <code>hello/bin</code>-store path in its <code>$PATH</code> so that the <code>hello</code> binary is available: </p>
+<div class="code"><pre class="code literal-block">nix<span class="w"> </span>shell<span class="w"> </span>--file<span class="w"> </span><span class="s2">"&lt;nixpkgs&gt;"</span><span class="w"> </span>hello<span class="w"> </span>--command<span class="w"> </span>bash
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span>
+<span class="c1"># /nix/store/rvb0s7vzinanr88calnlibrvgsgly63b-hello-2.12.1/bin:...</span>
+</pre></div>
+
+<p>Note that in the above file double ticks <code>are used instead of "", this is for specifying verbatim strings. 
+Also be aware that **sequences of n backticks of 3 or longer are parsed as n-1 literal backticks.** 
+A single space befornix shell nixpkgs#rustce the closing</code> is ignored if present.</p>
+<p>Afterwards, the <code>hello</code> program is run, so that <code>Hello, world!</code> is the output.</p>
+<h3>Example with Expression</h3>
+<p>We want to provide the <code>terraform</code> command.</p>
+<p>Create a file <code>./myterraform</code> with the following contents: </p>
+<p>TODO: check if this works</p>
+<div class="code"><pre class="code literal-block"><span class="ch">#! /usr/bin/env nix</span>
+<span class="c1">#! nix shell --impure --expr ``</span>
+<span class="c1">#! nix with (import (builtins.getFlake "nixpkgs") {});</span>
+<span class="c1">#! nix terraform.withPlugins (plugins: [ plugins.openstack ])</span>
+<span class="c1">#! nix ``</span>
+<span class="c1">#! nix --command bash</span>
+
+terraform<span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+</pre></div>
+
+<p>Then run: </p>
+<div class="code"><pre class="code literal-block">chmod<span class="w"> </span>a+x<span class="w"> </span>./myterraform
+</pre></div>
+
+<h3>Example with cascading interperters</h3>
+<p>TODO.</p>
+<h3>Sources</h3>
+<ul>
+<li>[<a href="https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix#shebang-interpreter">1</a>] Nix General Documentation</li>
+</ul>
+</div>
+    
+
+</article><footer id="footer"><p>Contents © 2024         <a href="mailto:kiqo@github.com">Kiqo</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+</p>
+<p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
+
+            
+        </footer>
+</div>
+    </section><script src="../../assets/js/all-nocdn.js"></script><script src="https://polyfill.io/v3/polyfill.js?features=Intl.RelativeTimeFormat.%7Elocale.en"></script><script src="../../assets/js/luxon.min.js"></script><!-- fancy dates --><script>
+    luxon.Settings.defaultLocale = "en";
+    fancydates(2, {"preset": false, "format": "yyyy-MM-dd HH:mm"});
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

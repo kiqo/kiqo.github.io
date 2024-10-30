@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html prefix="        og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Learning resources, basic terms and how to get started to learn Nix">
+<meta name="viewport" content="width=device-width">
+<title>How to Learn Nix | Kiqo's ML and Engineering Musings</title>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="https://kiqo.github.io/pages/how-to-learn-nix/">
+<!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Kiqo">
+<meta property="og:site_name" content="Kiqo's ML and Engineering Musings">
+<meta property="og:title" content="How to Learn Nix">
+<meta property="og:url" content="https://kiqo.github.io/pages/how-to-learn-nix/">
+<meta property="og:description" content="Learning resources, basic terms and how to get started to learn Nix">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2024-10-14T03:46:28+02:00">
+<meta property="article:tag" content="engineering">
+<meta property="article:tag" content="nix">
+<meta property="article:tag" content="os">
+</head>
+<body>
+    <a href="#page-content" class="sr-only sr-only-focusable">Skip to main content</a>
+    
+    <section class="social"><ul>
+<li><a href="../../index.html" title="Home"><i class="fa fa-home"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="fa fa-tags"></i></a></li>
+            <li><a href="https://github.com/kiqo" title="My Github"><i class="fab fa-github"></i></a></li>
+    
+    
+
+        </ul></section><section class="page-content"><div class="content" rel="main">
+            
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">How to Learn Nix</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <h3>What is Nix?</h3>
+<p>The super short and simplified answer: A tool, so that under certain conditions you can be 100% assured that a package installed on my machine will also work on your machine. </p>
+<h3>The Long Answer... Let's Learn Nix First!</h3>
+<p>Before deep-diving into how to learn Nix, let's start with what the term <code>Nix</code> can actually refer to. </p>
+<p>Here are the most important terms around the Nix ecosystem: 
+- <strong>Nix</strong> is a configuration language, the [[Nix language]]
+- <strong>Nix</strong> is a package manager for strict sandboxing and system isolation
+- <strong>Nixpgs</strong> is a package collection 
+- <strong>NixOS</strong> is a Linux Distribution  (that uses the configuration and package manager)</p>
+<p>Moreover, even more terms around the Nix ecosystem that you will stumble upon:</p>
+<ul>
+<li>
+<h3>Distinctions (explained <a href=".">here</a>)</h3>
+<ul>
+<li>
+<a href="https://nixos.wiki/wiki/Flakes">flakes</a> is an experimental feature for dependency management and powers most of the experimental nix CLI ("nix-command"). Any repository/directory with a <code>flake.nix</code> is a nix flake.</li>
+<li>(command) <a href="https://nixos.org/manual/nix/unstable/command-ref/new-cli/nix3-shell.html">nix-shell</a> is a command that works with flakes, which adds the specified packages to your environment (by updating <code>$PATH</code> and start a new shell)</li>
+<li>
+<a href="https://github.com/nix-community/home-manager">home-manager</a> is a tool to manage your home with modules. It is like NixOS but for your home. It doesn't really have much to do with flakes except that you can use it with flakes.</li>
+<li>(command) <code>nix-env</code> is a way to manage packages in a traditional, imperative fashion. It's a tool to build the derivation and link the things to your profile and can be seen as an alternative to <code>home-manager</code>, <code>nix-shell</code> or <code>NixOS configuration</code>. It is recommended to switch to one of the others tools, see [2].</li>
+</ul>
+</li>
+</ul>
+<h3>Nix Learning Resources</h3>
+<p>An incomplete list (write me if any resource is missing):</p>
+<ul>
+<li>(official) https://nixos.org/learn/</li>
+<li>(official) https://nixos.org/guides/nix-pills/</li>
+<li>(inofficial) <a href="https://github.com/ryan4yin/nixos-and-flakes-book">NixOS &amp; Flakes Book</a> © 2023 by Ryan Yin </li>
+<li>(inofficial) https://tonyfinn.com/blog/nix-from-first-principles-flake-edition/</li>
+<li>(inofficial?) https://github.com/spacekookie/learning-nix</li>
+</ul>
+<p>One small piece to be aware of: 
+In the official documentation, a <em>Tutorial</em> contains learning resources whereas a <em>Guide</em> contains only steps to follow [3].</p>
+<h3>Sources</h3>
+<p>[<a href="https://www.reddit.com/r/NixOS/comments/14cxklk/i_have_a_few_beginner_question_what_is_the/">1</a>] Distinctions between flakes / nix shell / home-manager
+[<a href="https://stop-using-nix-env.privatevoid.net/">2</a>] Stop using nix-env and alternatives 
+[<a href="https://nix.dev/contributing/documentation/diataxis#guides-vs-tutorials">3</a>] Guides vs. Tutorial in Nix.dev Documentation</p>
+    </div>
+    
+
+</article><footer id="footer"><p>Contents © 2024         <a href="mailto:kiqo@github.com">Kiqo</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+</p>
+<p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
+
+            
+        </footer>
+</div>
+    </section><script src="../../assets/js/all-nocdn.js"></script><script src="https://polyfill.io/v3/polyfill.js?features=Intl.RelativeTimeFormat.%7Elocale.en"></script><script src="../../assets/js/luxon.min.js"></script><!-- fancy dates --><script>
+    luxon.Settings.defaultLocale = "en";
+    fancydates(2, {"preset": false, "format": "yyyy-MM-dd HH:mm"});
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>
