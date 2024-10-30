@@ -39,4 +39,4 @@ Infrequent commands:
 
 ## Sources
 
-* [1](https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix.html) New Nix Cli vs. Old Cli
+* [[1](https://nix.dev/manual/nix/2.24/command-ref/new-cli/nix.html)] New Nix Cli vs. Old Cli

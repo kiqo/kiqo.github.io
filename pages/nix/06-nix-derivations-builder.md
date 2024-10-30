@@ -28,14 +28,6 @@ Attribute values are translated to environment variables as follows:
 * `true` is passed as the string `1`, `false` and `null` are passed as an empty string.
 
 
-
-
-
-
-
-
-
-
 ## Sources
 
 [[1](https://nix.dev/manual/nix/2.24/language/derivations#builder-execution)] Nix derivations builder execution documentation

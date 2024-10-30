@@ -144,7 +144,8 @@ Let's start with a very simple derivation, which just creates a file with the co
 For this, we make use of the built-in Nix function `derivation` (which you might notice has similar has mandatory fields as in the JSON serialization ;)). 
 
 We start simple by creating just a bash shell derivation: 
-```bash
+
+``` { .bash }
 nix repl # Drop into nix-repl
 nix-repl> derivation {name = "nixisfun"; builder="/bin/bash"; system=builtins.currentSystem; }
 # «derivation /nix/store/x0pz98jwh6lrj9xrvy53syhis1hx84f7-nixisfun.drv»

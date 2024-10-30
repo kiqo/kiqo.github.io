@@ -139,26 +139,26 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 #          with a ``/``, otherwise end them with ``/index.html`` — or
 #          else they won’t be highlighted when active.
 
+
+# Config for zen theme
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
-    ),
-    "de": (
-        ("/de/archive.html", "Archiv"),
-        ("/de/categories/", "Tags"),
-        ("/de/rss.xml", "RSS-Feed"),
-    ),
+        ('/index.html', 'Home', 'fa fa-home'),
+        # ('/archive.html', 'Archives', 'fa fa-folder-open'),
+        ('/categories/index.html', 'Tags', 'fa fa-tags'),
+        # ('/rss.xml', 'RSS', 'fa fa-rss'),
+        # ('https://getnikola.com', 'About me', 'fa fa-user'),
+        # ('https://twitter.com/getnikola', 'My Twitter', 'fab fa-twitter'),
+        ('https://github.com/kiqo', 'My Github', 'fab fa-github'),
+    )
 }
 
-# Alternative navigation links. Works the same way NAVIGATION_LINKS does,
-# although themes may not always support them. (translatable)
-# (Bootstrap 4: right-side of navbar, Bootblog 4: right side of title)
-NAVIGATION_ALT_LINKS = {DEFAULT_LANG: ()}
 
 # Name of the theme to use.
-THEME = "hack"
+THEME = "zen"
+
+# Config for zen theme
+DATE_FANCINESS = 2
 
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it
@@ -931,7 +931,7 @@ IMAGE_FOLDERS = {"images": "images"}
 # This list MAY be incomplete since pygments adds styles every now and then.
 # Check with list(pygments.styles.get_all_styles()) in an interpreter.
 #
-# CODE_COLOR_SCHEME = 'default'
+CODE_COLOR_SCHEME = None
 
 # FAVICONS contains (name, file, size) tuples.
 # Used to create favicon link like this:
@@ -1134,6 +1134,7 @@ PRETTY_URLS = True
 # Defaults are markdown.extensions.(fenced_code|codehilite|extra)
 # markdown.extensions.meta is required for Markdown metadata.
 MARKDOWN_EXTENSIONS = [
+    "pymdownx.superfences",
     "markdown.extensions.fenced_code",
     "markdown.extensions.codehilite",
     "markdown.extensions.extra",
@@ -1417,7 +1418,7 @@ WARN_ABOUT_TAG_METADATA = False
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
     # Config for Hack Theme
-    "HACK_VARIANT": "dark"
+    "HACK_VARIANT": "standard"
 }
 
 # Add functions here and they will be called with template

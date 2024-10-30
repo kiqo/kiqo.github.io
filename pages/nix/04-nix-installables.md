@@ -30,7 +30,7 @@ Note: TODO - unclear: why is it here with #?
 **Flake references** when used via the `nix`-cli are of the form `flakeref[#attrpath]` where `flakeref` is one of the above flake references and `attrpath` is an optional attribute path.
 
 For example, the following would select the `nixpkgs` flake, and print the output path. 
-```bash
+``` { .lang linenos=true linenostart=42 hl_lines="43-44 50" title="An Example Code Block" }
 nix build --print-out-paths 'nixpkgs#hello'
 # /nix/store/8fpvkfwr8fm91xlzznsgh3g1fcw0hfnh-hello-2.12.1
 ```

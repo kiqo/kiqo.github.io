@@ -4,7 +4,7 @@
 
 ```
 conda create -n kiqo.github.io "python=3.12"
-python -m pip install "Nikola[extras]"
+python -m pip install "Nikola[extras]" pymdown-extensions
 ```
 
 ## Nikola
